@@ -11,13 +11,13 @@ import org.springframework.util.StringUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.*;
 
 
+/**
+ * The type Java 8 service.
+ */
 @Service
 @Slf4j
 public class Java8Service {
@@ -165,6 +165,15 @@ public class Java8Service {
         System.out.println(empty.orElse("Arnold"));
 //        Object emptyValue = empty.orElseThrow(RuntimeException::new);
 
+    }
+
+    /**
+     * String join example.
+     */
+    public void stringJoinExample() {
+        List<String> databases = Arrays.asList("OracleDB", "Mongo", "PostgreSQL", "MySQL");
+        String string = String.join(", ", databases);
+        System.out.println(string);
     }
 
 }
